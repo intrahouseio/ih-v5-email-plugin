@@ -1,0 +1,84 @@
+{
+  "grid": [
+    { "id": "p1", "xs": 6, "class": "main", "table": "units" },
+    { "id": "p2", "xs": 6, "class": "main", "table": "units" },
+    { "id": "p9", "xs": 12, "class": "main", "table": "unitsTreeTable", "height": "fill" }
+  ],
+
+  "spacing": 10,
+
+  "p1": [
+    {
+      "prop": "header",
+      "title": "Сервисный плагин: Информирование",
+      "type": "header"
+    },
+    {
+      "prop": "service",
+      "title": "$mailservice",
+      "type": "droplist",
+      "data": [
+        { "id": "-", "title": "-" },
+        { "id": "Gmail", "title": "Gmail" },
+        { "id": "Mail.ru", "title": "Mail.ru" },
+        { "id": "Hotmail", "title": "Hotmail" },
+        { "id": "iCloud", "title": "iCloud" },
+        { "id": "Yahoo", "title": "Yahoo" },
+        { "id": "Yandex", "title": "Yandex.ru" }
+      ],
+      "default": "-"
+    },
+    {
+      "prop": "host",
+      "title": "$host",
+      "type": "input",
+      "hide": "data.p1.service.id && data.p1.service.id.length >2"
+    },
+    {
+      "prop": "port",
+      "title": "$port",
+      "type": "input",
+      "default": "465",
+      "hide": "data.p1.service.id && data.p1.service.id.length >2"
+    },
+    {
+      "prop": "user",
+      "title": "$user",
+      "type": "input"
+    },
+    {
+      "prop": "pass",
+      "title": "$password",
+      "type":"password"
+    }
+  ],
+
+  "p2": [
+    {
+      "prop": "restarttime",
+      "title": "$Unit_Restarttime",
+      "type": "input",
+      "default": 60
+    },
+    { "prop": "loglevel", "title": "$LogLevel", "type": "droplist", "data": "loglevelList" },
+    { "prop": "txt", "title": "$Comment", "type": "input" }
+  ],
+
+  "p9": [
+    {
+      "title": "",
+      "type": "table",
+      "prop": "unitsTreeTable",
+
+      "columns": [
+        { "prop": "name", "title": "ID", "type": "text", "width": 150 },
+        { "prop": "state", "title": "Состояние", "type": "text", "width": 150 },
+        { "prop": "laststart", "title": "Время запуска", "type": "text", "width": 150 },
+        { "prop": "laststop", "title": "Время останова", "type": "text", "width": 150 },
+        { "prop": "uptime", "title": "Uptime", "type": "text", "width": 150 },
+        { "prop": "error", "title": "Ошибка", "type": "text", "width": 250 }
+      ]
+    }
+  ]
+
+}

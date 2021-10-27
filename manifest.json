@@ -1,0 +1,53 @@
+{
+  "name": "email",
+  "description": "Email plugin",
+  "service": "sendinfo",
+  "single": 1,
+  "nochannels": 1,
+
+  "params": [
+    {
+      "name": "service",
+      "note": "$mailservice",
+      "type": "droplist",
+      "data": [
+        { "id": "-", "name": "-" },
+        { "id": "Gmail", "name": "Gmail" },
+        { "id": "Mail.ru", "name": "Mail.ru" },
+        { "id": "Hotmail", "name": "Hotmail" },
+        { "id": "iCloud", "name": "iCloud" },
+        { "id": "Yahoo", "name": "Yahoo" },
+        { "id": "Yandex", "name": "Yandex.ru" }
+      ]
+    },
+    {
+      "name": "host",
+      "note": "$host",
+      "type": "string",
+      "val": "",
+      "visible": "data.service && data.service.length <2"
+    },
+    {
+      "name": "port",
+      "note": "$port",
+      "type": "string",
+      "val": "465",
+      "visible": "data.service && data.service.length <2"
+    },
+    {
+      "name": "user",
+      "note": "$user",
+      "type": "string",
+      "val": ""
+    },
+    {
+      "name": "pass",
+      "note": "$password",
+      "type":"password",
+      "val": ""
+    }
+
+  ],
+
+  "actions": [{}]
+}

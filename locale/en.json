@@ -1,0 +1,8 @@
+{
+    "mailservice":"Mail service",
+    "host":"SMTP host",
+    "port":"SMTP port",
+    "user":"Sender",
+    "password":"Password"
+
+}

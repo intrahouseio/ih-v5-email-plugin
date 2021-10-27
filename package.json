@@ -1,0 +1,12 @@
+{
+  "name": "email",
+  "version": "5.5.0",
+  "description": "Email plugin",
+  "dependencies": {
+    "nodemailer": "^4.6.2"
+  },
+  "devDependencies": {},
+
+  "author": "INTRA",
+  "license": "MIT"
+}
