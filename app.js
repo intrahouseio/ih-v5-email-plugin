@@ -51,10 +51,10 @@ module.exports = {
     if (sendarr.length <= 0) return;
 
     this.mailOptions = {
-      from: (opt.sender ? opt.sender : 'IntraHouse') + '<' + opt.user + '>', // sender address
+      from: (opt.sender ? opt.sender : 'IH') + '<' + opt.user + '>', // sender address
       subject: getFirstWords(sendText, 3),
       to: sendarr[0].addr,
-      text: sendText + '\n' + sendarr[0].sign,
+      text: sendText + '\n\n' + sendarr[0].sign,
       encoding: 'utf8'
     };
     idx = -1;
