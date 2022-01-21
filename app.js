@@ -2,6 +2,8 @@ const util = require('util');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
+const defsign = 'IH';
+
 module.exports = {
   params: {},
   smtpOptions: {},
