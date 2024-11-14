@@ -13,6 +13,10 @@ module.exports = {
   async start(plugin) {
     this.plugin = plugin;
     this.params = plugin.params.data;
+    if (this.params.ppw) {
+      this.params.pass = plugin.getPassword(this.params);
+    }
+    
     try {
       this.smtpOptions = getSmtpObj(this.params);
       this.smtpTransport = nodemailer.createTransport(this.smtpOptions);
