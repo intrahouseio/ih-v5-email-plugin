@@ -4,6 +4,7 @@
   "service": "sendinfo",
   "single": 1,
   "nochannels": 1,
+  "passwordProp":"pass",
 
   "params": [
     {
