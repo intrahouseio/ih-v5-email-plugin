@@ -151,6 +151,10 @@ function getSmtpObj(opt) {
     result.host = opt.host;
     result.port = opt.port;
     result.secureConnection = Number(opt.port) == 465 ? true : false;
+    result.secure = Number(opt.port) == 465 ? true : false;
+    result.tls = {
+      rejectUnauthorized: false
+    }
     result.requiresAuth = true;
   }
   return result;
