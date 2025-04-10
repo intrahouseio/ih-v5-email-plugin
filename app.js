@@ -112,7 +112,11 @@ module.exports = {
   },
 
   terminate(code, err) {
-    const txt = err ? 'ERROR smtpTransport.verify:' + util.inspect(err) : '';
+    let txt = '';
+    if (err) {
+       txt = err.message || '';
+       txt = 'ERROR smtpTransport.verify. ' + txt;
+    }
     this.plugin.exit(code, txt);
   }
 };
